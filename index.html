@@ -1,0 +1,120 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- jQuery CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        
+        <!-- Link to unsplash js -->
+        <script src="/js/unsplash-source-js-master/dist/unsplash-source.js"></script>
+
+        <!-- My files -->
+        <link rel="stylesheet" href="css/site.css">
+        <script src="js/site.js"></script>
+    </head>
+    <body>
+        
+        <!-- Bootstrap Responsive breakdown -->
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-12">
+                
+                <!-- Page Header - Title -->
+                <h1>GIF Search</h1>
+
+                <!-- This form holds the serach term box and search buttons that call functions -->
+                <form class="formSeachParamaters">
+                    
+                    <!-- This is the text box to enter a search term -->
+                    <div class="form-group">
+                        <label for="textboxSearchTerm">Search</label>
+                        <input type="text" class="form-control" id="textboxSearchTerm" placeholder="What gif would you like?">
+                    </div>
+                    
+                    <!-- This is the button group that runs a basic search -->
+                    <div class="regSearch">
+
+                        <button type="submit" class="btn btn-default" id="buttonRegSearch">Submit</button>
+
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                5 Gifs
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                10 Gifs
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                                15 Gifs
+                            </label>
+                        </div>
+                    
+                    </div> <!-- End of: regSearch -->
+                    
+                    <!-- This is the button group that runs a random search -->
+                    <div class="randomSearch">
+
+                        <button type="submit" class="btn btn-default" id="buttonRandomSearch">Random Gif</button>
+
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                5 Gifs
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                10 Gifs
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                                15 Gifs
+                            </label>
+                        </div>
+                    
+                    </div> <!-- End of: randomSearch -->
+
+                </form> <!-- End of: formSeachParamaters -->
+
+            </div> <!-- End of: col-xs-12 - Search Group -->
+          </div> <!-- End of: row - Search Group-->
+        
+        <div class="row">
+            
+            <div class="col-xs-12">
+
+                <div id="divSearchRetuns">
+                    
+                </div> <!-- End of: divSearchRetuns - Results Group-->
+            </div> <!-- End of: col-xs-12 - Results Group-->
+        </div> <!-- End of: row - Results Group-->
+
+        </div> <!-- End of: container-fluid -->
+
+
+    </body>
+</html>
