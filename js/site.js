@@ -45,6 +45,7 @@
 		// This button runs a search on a search term that the user enters
 		$("#buttonRandomSearch").click(function(){
 
+			// Gets a random number from 0 - 99
 			var randomNum = parseInt(Math.random()*99);
 
 			$.ajax({
@@ -65,6 +66,55 @@
 			});
 
 		}); // End of buttonRandomSearch
+
+
+		
+
+
+
+
+
+
+
+		$("#test").click(function(){
+
+			// Makes a new array
+			var arrNew = new Array();
+			
+			for (var i = 0; i < 15; i++){
+
+				var randomNum = parseInt(Math.random()*99);
+				
+				arrNew.push(randomNum);
+
+				var randomNum = arrNew[i];
+
+			}
+
+			for (var j = 0; j < 15; j++) {
+
+					$.ajax({
+						type:"GET",
+						dataType:"json",
+						url:"http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC&limit=100",
+						error: function(err){console.log(err);},
+						success: function(response){
+
+							var arr = response;
+
+							var gifURL = arr.data[randomNum].images.fixed_height.url;
+						
+							$("#divSearchRetuns").append(
+								'<div class=divRandomSearch><img src="' + gifURL + '" /><br /><span><a href="' + gifURL + '"</a>Link</span></div>'
+							);
+						}
+					});
+	
+				}
+
+			
+
+		});
 		
 	}); // End of jQuery Self Invoked
 
