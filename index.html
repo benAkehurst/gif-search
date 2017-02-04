@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>GIF Search</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
@@ -23,6 +23,9 @@
         <!-- Links to stylesheet for Emoji Use -->
         <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
 
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
         <!-- My files -->
         <link rel="stylesheet" href="css/site.css">
         <script src="js/site.js"></script>
@@ -41,26 +44,31 @@
                     <!-- This is the text box to enter a search term -->
                     <div class="form-group">
                         <label for="textboxSearchTerm">Search</label>
-                        <input type="text" class="form-control" id="textboxSearchTerm" placeholder="What kind of gif would you like?">
+                        <input type="text" class="form-control" id="textboxSearchTerm" placeholder="What kind of gif would you like?" required>
+                        <span id="spanWarning"></span>
                     </div>
                     
-                    <!-- This is the button group that runs a basic search -->
-                    <div class="regSearch">
+                    <div class="divButtonHolder">
 
-                        <button type="submit" class="btn btn-default" id="buttonRegSearch">Submit</button>
-                    
-                    </div> <!-- End of: regSearch -->
-                    
-                    <!-- This is the button group that runs a random search -->
-                    <div class="randomSearch">
+                        <!-- This is the button group that runs a basic search -->
+                        <div class="regSearch">
 
-                        <button type="submit" class="btn btn-default" id="buttonRandomSearch">Random Gif</button>
-                    
-                    </div> <!-- End of: randomSearch -->
+                            <button type="submit" class="btn btn-default" id="buttonRegSearch">Submit</button>
+                        
+                        </div> <!-- End of: regSearch -->
+                        
+                        <!-- This is the button group that runs a random search -->
+                        <div class="randomSearch">
+                            <button type="submit" class="btn btn-default" id="buttonRandomSearch">Random Gif</button>
+                        
+                        </div> <!-- End of: randomSearch -->
 
-                    <div class="15Gifs">
-                        <button type="submit" class="btn btn-default" id="buttonGet15Gifs"><i class="em em-smile"></i></button>
-                    </div> 
+                        <div class="fifteenGifs">
+                            <button type="submit" class="btn btn-default" id="buttonGet15Gifs"><i class="em em-smile"></i></button>
+                        </div>
+
+                    </div>
+
             </div> <!-- End of: col-xs-12 - Search Group -->
           </div> <!-- End of: row - Search Group-->
         
@@ -69,8 +77,12 @@
             <div class="col-xs-12">
 
                 <div id="divSearchRetuns">
+
                     
                 </div> <!-- End of: divSearchRetuns - Results Group-->
+
+                <button type="submit" class="btn btn-default" id="backToTop">Back to the top</button>
+                
             </div> <!-- End of: col-xs-12 - Results Group-->
         </div> <!-- End of: row - Results Group-->
 

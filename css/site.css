@@ -1,0 +1,26 @@
+* {
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+}
+
+h1 {
+	font-size:10vw;
+}
+
+h4 {
+	font-size:2.5vw;
+}
+
+.divButtonHolder {
+	display:inline-block;
+}
+
+.regSearch, .randomSearch, .fifteenGifs {
+	display:inline-block;
+	margin: 10px;
+	margin-top: 10px;
+} 
+
+#backToTop {
+	display: none;
+}
