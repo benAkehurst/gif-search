@@ -1,14 +1,14 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html lang="en" ng-app="appModule">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>GIF Search</title>
+        <title>Gif Search</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <!-- jQuery CDN -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         
         <!-- Bootstrap -->
         <!-- Latest compiled and minified CSS -->
@@ -20,73 +20,37 @@
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-        <!-- Links to stylesheet for Emoji Use -->
-        <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
-
+        <!-- Modernizer -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="assets/css/site.css">
+        <!-- Link to Font Awesome -->
+        <script src="https://use.fontawesome.com/7d0faa3ea8.js"></script>
         <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Slabo+27px|Space+Mono" rel="stylesheet">
 
-        <!-- My files -->
-        <link rel="stylesheet" href="css/site.css">
-        <script src="js/site.js"></script>
+        <!-- The main AngularJS Links via Angular CDN angularjs.org -->
+        <!-- Base -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+        <!-- The Angular Routes file -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.min.js"></script>
+
+        <script src="app/appModule.js"></script>
+        <script src="app/searchModule.js"></script>
+        <script src="assets/js/site.js"></script>
+
     </head>
     <body>
-        
-        <!-- Bootstrap Responsive breakdown -->
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-xs-12">
-                
-                <!-- Page Header - Title -->
-                <h1>GIF Search</h1>
-                <h4>Powered by the <a href="http://api.giphy.com">Giphy</a> API</h4>
-                    
-                    <!-- This is the text box to enter a search term -->
-                    <div class="form-group">
-                        <label for="textboxSearchTerm">Search</label>
-                        <input type="text" class="form-control" id="textboxSearchTerm" placeholder="What kind of gif would you like?" required>
-                        <span id="spanWarning"></span>
-                    </div>
-                    
-                    <div class="divButtonHolder">
 
-                        <!-- This is the button group that runs a basic search -->
-                        <div class="regSearch">
-
-                            <button type="submit" class="btn btn-default" id="buttonRegSearch">Submit</button>
-                        
-                        </div> <!-- End of: regSearch -->
-                        
-                        <!-- This is the button group that runs a random search -->
-                        <div class="randomSearch">
-                            <button type="submit" class="btn btn-default" id="buttonRandomSearch">Random Gif</button>
-                        
-                        </div> <!-- End of: randomSearch -->
-
-                        <div class="fifteenGifs">
-                            <button type="submit" class="btn btn-default" id="buttonGet15Gifs"><i class="em em-smile"></i></button>
-                        </div>
-
-                    </div>
-
-            </div> <!-- End of: col-xs-12 - Search Group -->
-          </div> <!-- End of: row - Search Group-->
-        
-        <div class="row">
-            
-            <div class="col-xs-12">
-
-                <div id="divSearchRetuns">
-
-                    
-                </div> <!-- End of: divSearchRetuns - Results Group-->
-
-                <button type="submit" class="btn btn-default" id="backToTop">Back to the top</button>
-                
-            </div> <!-- End of: col-xs-12 - Results Group-->
-        </div> <!-- End of: row - Results Group-->
-
-        </div> <!-- End of: container-fluid -->
+        <main>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div ng-view></div>    
+                </div>
+            </div>
+        </main>
 
     </body>
 </html>
