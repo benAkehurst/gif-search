@@ -1,29 +1,41 @@
 <link rel="stylesheet" type="text/css" href="app/searchView.css">
-
 <div class="container col-xs-12">
-	
-	<section class="header_bar">
-		<div class="header_bar_title">
-			<span><h1 class="awesome_text_effect">Gif Search</h1></span>
-		</div>
-		<div class="header_bar_search_options">
-			<input type="text" name="">
-			<button class="btn btn-info">Search</button>
-			<button class="btn btn-danger">Random!!!</button>
-		</div>
-	</section>
+    <section class="header_bar">
+        <div class="header_bar_title">
+            <span><h1 class="awesome_text_effect">Gif Search</h1></span>
+        </div>
+        <div class="header_bar_search_options">
+            <input type="text" class="text_input" ng-keyup="$event.keyCode == 13 ? getGif(userSearch) : null" placeholder="search gif" ng-model="userSearch">
+        </div>
 
-	<div class="main_elements_container">
-		<section class="side_bar">
-			<h2>Past 10 Searchs:</h2>
-			<ul>
-				<li></li>
-			</ul>
-		</section>
+        <div class="buttons_container">
+            <button ng-click="getGif(userSearch)" class="btn btn-lg btn-info search_button">Search</button>
+        </div>
 
-		<section class="main_view">
-			<div class=""
-		</section>
-	</div>
+    </section>
 
+    <div class="main_elements_container">
+
+        <section class="side_bar">
+            <h2>Past Searches:</h2>
+            <ul>
+                <li ng-repeat="i in searches" ng-click="getGif(i.term)" ng-class="{past_search: i.term, random_search: i.term === 'random'}">
+                	<h2>{{i.term}}</h2>
+                </li>
+            </ul>
+        </section>
+
+        <section class="main_view">
+
+            <div class="gif_search_return_container" ng-repeat="item in userGif track by $index">
+            	<div class="repeaded_gif_div row|($index % 3 == 0)">
+               		<div class="col-md-4 single_search_gif">
+               			<a href="{{item.bitly_url}}"><img class="repeated_gif_img" ng-src="{{item.images.downsized.url}}"></a>
+               		</div>
+               </div>
+            </div>
+
+        </section>
+
+    </div>
 </div>
