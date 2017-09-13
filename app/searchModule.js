@@ -6,7 +6,7 @@
 
     searchModule.controller("SearchController", function($scope, $http) {
 
-    	var baseUrl = "http://api.giphy.com/v1/gifs/search?q=";
+    	var baseUrl = "https://api.giphy.com/v1/gifs/search?q=";
     	var apiLimit = "&api_key=0ba59fa3a33748829f020bd4d8e4fd5d&limit=15";
     	
         var arr = [];
